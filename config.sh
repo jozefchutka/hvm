@@ -96,7 +96,7 @@ if [ ! -d "$HAXELIBPATH" ]; then
 	mkdir -p "$HVM/versions/haxelib"
 
 	VERSION=$( echo "$HAXELIB" | tr "." "," )
-	URL="http://lib.haxe.org/files/3.0/haxelib_client-$VERSION.zip"
+	URL="http://lib.haxe.org/files/3.0/haxelib-$VERSION.zip"
 	ARCHIVE="$HAXELIBPATH.zip"
 
 	if [ "$HAXELIB" == "dev" ]; then

@@ -35,7 +35,7 @@ hvm_get_haxelib_versions() {
 	local VERSIONS=()
 	local REGEX=">([0-9\.rc\-]*)<"
 	# https://www.youtube.com/watch?v=w3PoTnkLfxE
-	local HREFS=$( curl --silent -L http://lib.haxe.org/p/haxelib_client/versions/ 2>&1 | grep "/\" class=\"text" )
+	local HREFS=$( curl --silent -L http://lib.haxe.org/p/haxelib/versions/ 2>&1 | grep "/\" class=\"text" )
 	for HREF in $HREFS; do
 		if [[ $HREF =~ $REGEX ]]; then
 			VERSIONS+=("${BASH_REMATCH[1]}")
